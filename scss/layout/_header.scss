@@ -1,3 +1,134 @@
 .header {
-	
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+} 
+
+.header-body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
 }
+
+.logo {
+    position: relative;
+    z-index: 10;
+}
+
+.header_list {
+    display: flex;
+    position: relative; 
+    
+    li {
+       list-style: none;
+       margin: 0 0 0 20px; 
+     }  
+    
+    .active a {
+       color: $aqua-blue;
+      }
+    
+    a {
+       color: $white;
+       text-transform: uppercase;
+       font-size: 13px;
+       text-decoration: none;
+       display: block;
+       transition: color .3s linear;
+       font-family: 'Roboto', sans-serif;
+       font-weight: 900;
+    
+         &:hover {
+           color: $aqua-blue;
+      }
+    }
+} 
+    
+@include media ('<tablet') {
+    
+    .header_burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 30;
+
+        &::before,
+        &::after {
+           content: '';
+           background-color: $aqua-blue;
+           position: absolute;
+           width: 100%;
+           height: 4px;
+           left: 0;
+           transition: all .3s linear;
+           border-radius: 2px;
+        }
+        
+        &:before {
+            top: 0;
+        }
+        
+        &::after {
+            bottom: 0;
+        }
+    }
+    
+    .header_burger span {
+        position: absolute;
+        background-color: $aqua-blue;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        top: 8px;
+        transition: all .3s linear;
+        border-radius: 2px;
+    }
+    
+    .header_burger.active span {
+        transform: scale(0);
+    }
+    
+    .header_burger.active::before {
+        transform: rotate(45deg);
+        top: 8px;
+    }
+    
+    .header_burger.active::after {
+        transform: rotate(-45deg);
+        bottom: 8px;
+    }
+    
+    .header_menu {
+        position: absolute;
+        left: -15px;
+        height: 100vh;
+        background: linear-gradient(to bottom, #510077 0%,#6c2c89 20%,#6c2c89 20%,#3b005b 76%,#1c0128 100%);
+        padding: 70px 10px 10px 10px;
+        transition: all .3s linear;
+        overflow: auto;
+        top: 100%;
+        right: -15px;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .header_menu.active {
+        opacity: 1;
+        visibility: visible;
+
+    }
+    
+    .header_list {
+        display: block;
+        
+        li {
+          margin: 0 0 20px 0;  
+        }
+     }    
+}
+  
