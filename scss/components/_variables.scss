@@ -10,16 +10,17 @@ $yellow: #ff0;
 
 $black: #000;
 $white: #fff;
+$aqua-blue: #00e0d0;
 
-$base-font-sans-serif: 'Rubik', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
-$base-font-serif: 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
+$base-font-sans-serif: 'Hammersmith One', 'Roboto', 'Rubik', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$base-font-serif: 'Playfair Display', serif, 'Times New Roman', 'Times', 'Baskerville', 'Georgia', serif;
 
 // Основной размер и цвет текста, семейство шрифта и цвет фона
 $base-text-color: $black;
 $base-background-color: $white !default;
-$font-size-base: 16px !default;
-$line-height-base: 1.2 !default;
-$base-font-family: $base-font-sans-serif !default;
+$font-size-base: 14px;
+$line-height-base: 1.6;
+$base-font-family: 'Roboto', sans-serif;
 
 $base-min-width: 320px;
 
@@ -32,8 +33,8 @@ $form-element-focus-border-color: $black;
 $placeholder-color: $gray ;
 
 // Переменные font-size для заголовков
-$h1-font-size: 40px;
-$h2-font-size: 27px;
+$h1-font-size: 32px;
+$h2-font-size: 22px;
 $h3-font-size: 24px;
 $h4-font-size: 21px;
 $h5-font-size: 17px;
